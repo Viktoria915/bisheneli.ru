@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+<head>
+  <title>Наши щенки</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900,900i%7CPT+Serif:400,700">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /*!
+     * chiefSlider (https://itchief.ru/lessons/php/feedback-form-for-website)
+     * Copyright 2018 Alexander Maltsev
+     * Licensed under MIT (https://github.com/itchief/feedback-form/blob/master/LICENSE)
+     */
+
+    s {
+      margin: 100px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #fff;
+      height: 3000px;
+    }
+
+    .slider {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider__wrapper {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .slider__control {
+      position: absolute;
+      top: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      color: #fff;
+      text-align: center;
+      opacity: 0.5;
+      height: 50px;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, .5);
+    }
+
+    .slider__control_show {
+      display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: .9;
+    }
+
+    .slider__control_left {
+      left: 0;
+    }
+
+    .slider__control_right {
+      right: 0;
+    }
+
+    .slider__control::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: transparent no-repeat center center;
+      background-size: 50% 50%;
+    }
+
+    .slider__control_left::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slider__control_right::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    .slider__item>div {
+      line-height: 250px;
+      font-size: 100px;
+      text-align: center;
+    }
+
+    .text {
+      text-align: center;
+      margin: 40px;
+      line-height: 340px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preloader">
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
+      </div>
+      <p>Загрузка...</p>
+    </div>
+  </div>
+  <div class="page">
+    <!-- Page Header-->
+    <header class="section page-header">
+      <!-- RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+          data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+          data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <div class="rd-navbar-main-outer">
+            <div class="rd-navbar-main">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a href="about-us.html"><img class="brand-logo-light"
+                      src="images/logo-default1-140x57.png" alt="" width="140" height="57"
+                      srcset="images/logo-default-280x113.png 2x" /></a></div>
+              </div>
+              <div class="rd-navbar-main-element">
+                <div class="rd-navbar-nav-wrap">
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="nashidog.html">Наши собаки</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="puppies.html">Наши щенки</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="novosti.html">Новости</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- class="parallax-container overlay-1" data-parallax-img="images/breadcrumbs4.jpg" -->
+    <section id="header-img">
+      <div class="parallax-content breadcrumbs-custom context-dark">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+              <h2 class="breadcrumbs-custom-title">Наши щенки</h2>
+              <ul class="breadcrumbs-custom-path">
+                <li><a href="index.html">Главная</a></li>
+                <li class="active">Наши щенки</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="slider">
+      <div class="slider__wrapper">
+        <div class="slider__item">
+          <div style=" margin: 50px; background: rgb(255, 255, 255);"><img src="images/im2/sh1.jpg" />
+          </div>
+        </div>
+        <div class="slider__item">
+          <div style=" margin: 50px; background: rgb(255, 255, 255);"><img src="images/im2/sh2.jpg" />
+          </div>
+        </div>
+        <div class="slider__item">
+          <div style=" margin: 50px; background: rgb(255, 255, 255);"><img src="images/im2/sh3.jpg" />
+          </div>
+        </div>
+        <div class="slider__item">
+          <div style=" margin: 50px; background: rgb(255, 255, 255);"><img src="images/im2/sh4.jpg" />
+          </div>
+        </div>
+      </div>
+      <a class="slider__control slider__control_left" href="#" role="button"></a>
+      <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+    </div>
+    <div class="text">
+      <h2>Почему стоит приобрести щенка именно у нас</h2>
+      <div class="divider"></div>
+      <h6>В нашем питомнике лучшие сочетания кровей, к разведению допускаются только те собаки которые находятся в
+        "стандарте" породы.</h6>
+      <h6>Так же наш питомник оказывает поддержку в воспитании щенков из нашего питомника.</h6>
+    </div>
+    <script>
+      'use strict';
+      var multiItemSlider = (function () {
+        return function (selector, config) {
+          var
+            _mainElement = document.querySelector(selector), // основный элемент блока
+            _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+            _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+            _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+            _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+            _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+            _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+            _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента    
+            _positionLeftItem = 0, // позиция левого активного элемента
+            _transform = 0, // значение транфсофрмации .slider_wrapper
+            _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+            _items = []; // массив элементов
+          // наполнение массива _items
+          _sliderItems.forEach(function (item, index) {
+            _items.push({ item: item, position: index, transform: 0 });
+          });
+
+          var position = {
+            getMin: 0,
+            getMax: _items.length - 1,
+          }
+
+          var _transformItem = function (direction) {
+            if (direction === 'right') {
+              if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+                return;
+              }
+              if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+                _sliderControlLeft.classList.add('slider__control_show');
+              }
+              if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+                _sliderControlRight.classList.remove('slider__control_show');
+              }
+              _positionLeftItem++;
+              _transform -= _step;
+            }
+            if (direction === 'left') {
+              if (_positionLeftItem <= position.getMin) {
+                return;
+              }
+              if (!_sliderControlRight.classList.contains('slider__control_show')) {
+                _sliderControlRight.classList.add('slider__control_show');
+              }
+              if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+                _sliderControlLeft.classList.remove('slider__control_show');
+              }
+              _positionLeftItem--;
+              _transform += _step;
+            }
+            _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+          }
+
+          // обработчик события click для кнопок "назад" и "вперед"
+          var _controlClick = function (e) {
+            if (e.target.classList.contains('slider__control')) {
+              e.preventDefault();
+              var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+              _transformItem(direction);
+            }
+          };
+
+          var _setUpListeners = function () {
+            // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+            _sliderControls.forEach(function (item) {
+              item.addEventListener('click', _controlClick);
+            });
+          }
+
+          // инициализация
+          _setUpListeners();
+
+          return {
+            right: function () { // метод right
+              _transformItem('right');
+            },
+            left: function () { // метод left
+              _transformItem('left');
+            }
+          }
+
+        }
+      }());
+
+      var slider = multiItemSlider('.slider')
+
+    </script>
+    <section class="section section-lg bg-gray-1">
+      <div class="container">
+        <div class="row row-50">
+          <div class="col-lg-6 pr-xl-5"><img src="images/im2/sh5.jpg" alt="" width="600" height="318" />
+          </div>
+          <div class="col-lg-6">
+            <h2>Продается сын Одина и Эстель из Запруда</h2>
+            <p><a href="https://www.facebook.com/yulya.naryshkina">Купить щенка</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Footer-->
+    <footer class="section footer-minimal context-dark">
+      <div class="container wow-outer">
+        <div class="wow fadeIn">
+          <div class="row row-60">
+            <div class="col-12"><a href="index.html"><img src="images/logo-default1-140x57.png" alt="" width="140"
+                  height="57" srcset="images/logo-default-280x113.png 2x" /></a></div>
+            <div class="col-12">
+              <ul class="footer-minimal-nav">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="nashidog.html">Наши собаки</a></li>
+                <li><a href="puppies.html">Щенки</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="novosti.html">Новости</a></li>
+              </ul>
+            </div>
+            <div class="col-12">
+              <ul class="social-list">
+                <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook"
+                    href="https://www.facebook.com/yulya.naryshkina?epa=SEARCH_BOX"></a></li>
+                <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-vk"
+                    href="https://vk.com/id311216584"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="snackbars" id="form-output-global"></div>
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
